@@ -73,7 +73,8 @@ public class TransitionDelegate: UIPercentDrivenInteractiveTransition {
 		switch gesture.state {
 		case .Began:
 			isInteractive = true
-			destinationViewController.performSegueWithIdentifier("b", sender: nil)
+//			destinationViewController.performSegueWithIdentifier("b", sender: nil)
+			destinationViewController.dismissViewControllerAnimated(true, completion: nil)
 		case .Changed:
 			self.updateInteractiveTransition(distance)
 		default:
@@ -147,20 +148,26 @@ extension TransitionDelegate : UIViewControllerAnimatedTransitioning {
 			}
 			}) { (finished) in
 				print(transitionContext.transitionWasCancelled())
-//				if transitionContext.transitionWasCancelled() {
-//					transitionContext.completeTransition(false)
-//				} else {
-//					transitionContext.completeTransition(true)
-//					if self.isPresenting {
-//						menuVC.view.addSubview(mainView)
-//					}
-//				}
-				if self.isPresenting {
-					transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-					menuVC.view.addSubview(mainView)
+				if transitionContext.transitionWasCancelled() {
+					transitionContext.completeTransition(false)
+					UIApplication.sharedApplication().keyWindow?.addSubview(screen.from.view)
 				} else {
-					transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+					transitionContext.completeTransition(true)
+					UIApplication.sharedApplication().keyWindow?.addSubview(screen.to.view)
+					if self.isPresenting {
+						menuVC.view.addSubview(mainView)
+					}
 				}
+//				if self.isPresenting {
+//					transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+//					menuVC.view.addSubview(mainView)
+//					if transitionContext.transitionWasCancelled() {
+//						container.addSubview(mainView)
+//					}
+//				} else {
+//					transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+//					
+//				}
 				
 //				transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
 //				if self.isPresenting {
