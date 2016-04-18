@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PercentageTranition" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xDF-te-Uah">
+                                <rect key="frame" x="20" y="28" width="560" height="552"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xDF-te-Uah" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="GYR-Ec-uri"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xDF-te-Uah" secondAttribute="bottom" constant="20" id="aPQ-Kd-764"/>
+                            <constraint firstAttribute="trailing" secondItem="xDF-te-Uah" secondAttribute="trailing" constant="20" id="f3d-Ze-37n"/>
+                            <constraint firstItem="xDF-te-Uah" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="nfz-NB-cao"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="sLQ-YF-OtP" kind="presentation" identifier="a" id="maZ-91-Roy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="367" y="310"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="XEv-Y6-aJZ">
+            <objects>
+                <viewController id="sLQ-YF-OtP" customClass="MenuViewController" customModule="PercentageTranition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tGm-Fv-bbd"/>
+                        <viewControllerLayoutGuide type="bottom" id="cJO-f3-ReC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h2L-Da-nZz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="d.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="LfT-jO-lvS">
+                                <rect key="frame" x="20" y="28" width="560" height="552"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cJO-f3-ReC" firstAttribute="top" secondItem="LfT-jO-lvS" secondAttribute="bottom" constant="20" id="5Ma-6r-Wtx"/>
+                            <constraint firstAttribute="trailing" secondItem="LfT-jO-lvS" secondAttribute="trailing" constant="20" id="IF6-Kr-EyC"/>
+                            <constraint firstItem="LfT-jO-lvS" firstAttribute="top" secondItem="tGm-Fv-bbd" secondAttribute="bottom" constant="8" id="ZKi-Vg-Shu"/>
+                            <constraint firstItem="LfT-jO-lvS" firstAttribute="leading" secondItem="h2L-Da-nZz" secondAttribute="leading" constant="20" id="cls-zh-zG4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="unM-lZ-QRH" kind="unwind" identifier="b" unwindAction="unwindToMainViewController:" id="RkA-NV-63D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n0J-lW-8Ln" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="unM-lZ-QRH" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1107" y="317"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="c.jpg" width="4000" height="3000"/>
+        <image name="d.jpeg" width="5760" height="3840"/>
+    </resources>
 </document>

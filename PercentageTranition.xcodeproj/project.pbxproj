@@ -14,6 +14,11 @@
 		635E698F1CC3C09C00C67689 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635E698D1CC3C09C00C67689 /* LaunchScreen.storyboard */; };
 		635E699A1CC3C09C00C67689 /* PercentageTranitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E69991CC3C09C00C67689 /* PercentageTranitionTests.swift */; };
 		635E69A51CC3C09C00C67689 /* PercentageTranitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E69A41CC3C09C00C67689 /* PercentageTranitionUITests.swift */; };
+		635E69B31CC3C0BD00C67689 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E69B21CC3C0BD00C67689 /* MenuViewController.swift */; };
+		635E69B51CC3C0DF00C67689 /* TranitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E69B41CC3C0DF00C67689 /* TranitionDelegate.swift */; };
+		635E69BB1CC3DBF600C67689 /* SecondTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635E69BA1CC3DBF600C67689 /* SecondTransitionDelegate.swift */; };
+		635E69BE1CC471FB00C67689 /* d.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 635E69BC1CC471FB00C67689 /* d.jpeg */; };
+		635E69BF1CC471FB00C67689 /* c.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 635E69BD1CC471FB00C67689 /* c.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		635E69A01CC3C09C00C67689 /* PercentageTranitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PercentageTranitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635E69A41CC3C09C00C67689 /* PercentageTranitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageTranitionUITests.swift; sourceTree = "<group>"; };
 		635E69A61CC3C09C00C67689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635E69B21CC3C0BD00C67689 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		635E69B41CC3C0DF00C67689 /* TranitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranitionDelegate.swift; sourceTree = "<group>"; };
+		635E69BA1CC3DBF600C67689 /* SecondTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTransitionDelegate.swift; sourceTree = "<group>"; };
+		635E69BC1CC471FB00C67689 /* d.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d.jpeg; sourceTree = "<group>"; };
+		635E69BD1CC471FB00C67689 /* c.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = c.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +108,15 @@
 			isa = PBXGroup;
 			children = (
 				635E69841CC3C09C00C67689 /* AppDelegate.swift */,
-				635E69861CC3C09C00C67689 /* ViewController.swift */,
 				635E69881CC3C09C00C67689 /* Main.storyboard */,
+				635E69BA1CC3DBF600C67689 /* SecondTransitionDelegate.swift */,
+				635E69861CC3C09C00C67689 /* ViewController.swift */,
+				635E69B41CC3C0DF00C67689 /* TranitionDelegate.swift */,
+				635E69B21CC3C0BD00C67689 /* MenuViewController.swift */,
 				635E698B1CC3C09C00C67689 /* Assets.xcassets */,
 				635E698D1CC3C09C00C67689 /* LaunchScreen.storyboard */,
+				635E69BC1CC471FB00C67689 /* d.jpeg */,
+				635E69BD1CC471FB00C67689 /* c.jpg */,
 				635E69901CC3C09C00C67689 /* Info.plist */,
 			);
 			path = PercentageTranition;
@@ -231,6 +246,8 @@
 			files = (
 				635E698F1CC3C09C00C67689 /* LaunchScreen.storyboard in Resources */,
 				635E698C1CC3C09C00C67689 /* Assets.xcassets in Resources */,
+				635E69BF1CC471FB00C67689 /* c.jpg in Resources */,
+				635E69BE1CC471FB00C67689 /* d.jpeg in Resources */,
 				635E698A1CC3C09C00C67689 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				635E69871CC3C09C00C67689 /* ViewController.swift in Sources */,
+				635E69BB1CC3DBF600C67689 /* SecondTransitionDelegate.swift in Sources */,
+				635E69B51CC3C0DF00C67689 /* TranitionDelegate.swift in Sources */,
+				635E69B31CC3C0BD00C67689 /* MenuViewController.swift in Sources */,
 				635E69851CC3C09C00C67689 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
